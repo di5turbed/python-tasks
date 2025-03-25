@@ -1,4 +1,4 @@
-def считатель():
+def schitatel():
     try:
         число = input("Введите положительное число: ")
         
@@ -18,5 +18,5 @@ def считатель():
 
     except ValueError as e:
         print(e)
-
-считатель()
+        
+schitatel()
