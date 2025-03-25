@@ -1,18 +1,21 @@
 #Задание 3
-def возраст():
-    try:
-        число = input("Введите возраст:");
-        if not число.isdigit():
-            raise ValueError("Возраст не может быть отрицательным! :D ")
-        
-        число = int(число)
+def age():
+    while True:
+        try:
+            age_stroka = input("Введите возраст: ")
+            age_int = int(age_stroka)
 
-        if число >=18:
-            print("Вы совершеннолетний!")
-        else:
-            print("Вы несовершеннолетний!")
+            if age_int < 0:
+                raise ValueError("Возраст не может быть отрицательным! :D ")
 
-    except ValueError as e:
-        print(e)
+            if age_int >= 18:
+                print("Вы совершеннолетний!")
+            else:
+                print("Вы несовершеннолетний!")
+            break
 
-возраст()
+        except ValueError as e:
+            print(f"Ошибка: {e}")
+            print("Пожалуйста, введите целое положительное число.")
+
+age()
