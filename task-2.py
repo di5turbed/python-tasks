@@ -1,20 +1,20 @@
 def schitatel():
     try:
-        число = input("Введите положительное число: ")
+        digit = input("Введите положительное число: ")
         
-        if not число.lstrip('-').isdigit():
+        if not digit.lstrip('-').isdigit():
             raise ValueError("Ошибка: Вы ввели не число!")
         
-        число = int(число)
+        digit = int(digit)
 
-        if число < 0:
+        if digit < 0:
             print("Ошибка: число отрицательное!")
             return
 
-        if число % 2 == 0:
-            print(f"Число {число} является чётным")
+        if digit % 2 == 0:
+            print(f"Число {digit} является чётным")
         else:
-            print(f"Число {число} нечётное")
+            print(f"Число {digit} нечётное")
 
     except ValueError as e:
         print(e)
