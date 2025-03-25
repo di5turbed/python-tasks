@@ -1,15 +1,17 @@
 #Задание 4
-def длина():
+def length():
     while True:
-        ввод = input("Введите число: → ")
+        digit = input("Введите число (или 'exit' для выхода):")
         
-        if ввод.lower() == "exit":
+        if digit.lower() == "exit":
             print("Выход из программы...")
             break
         
-        if ввод.lstrip('-').isdigit():
-            количество = len(ввод.lstrip('-'))
-            print(f"В этом числе {количество} цифр.")
-        else:
-            print("Ошибка: данные не являются числом.")
-длина()
+        try:
+            num = int(digit)
+            length = len(digit.lstrip('-'))
+            print(f"В этом числе {length} цифр.")
+        except ValueError:
+            print("Ошибка: введённые данные не являются целым числом.")
+
+length()
