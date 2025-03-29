@@ -11,7 +11,7 @@ def length():
             num = int(digit)
             length = len(digit.lstrip('-'))
             print(f"В этом числе {length} цифр.")
-        except ValueError:
+        except:
             print("Ошибка: введённые данные не являются целым числом.")
 
 length()
